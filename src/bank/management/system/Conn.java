@@ -1,4 +1,4 @@
-//package bank.management.system;
+package bank.management.system;
 
 import java.sql.*;
 
@@ -13,7 +13,7 @@ public class Conn {
             s = c.createStatement();
 
         } catch (Exception e) {
-            System.err.println(e);
+            System.out.println(e);
         }
 
     }

@@ -11,7 +11,6 @@ public class SignupOne extends JFrame implements ActionListener {
 
     long random;
     JTextField nameTextField, mnameTextField, dobTextField, emailTextField, addressTextField, cityTextField, stateTextField, pinTextField;
-    //JTextField nameTextField, mnameTextField, emailTextField, addressTextField, cityTextField, stateTextField, pinTextField;
     JButton next;
     JRadioButton male, female, other, married, unmarried;
     JDateChooser dateChooser;
@@ -58,10 +57,10 @@ public class SignupOne extends JFrame implements ActionListener {
         dob.setBounds(100, 240, 200, 30);
         add(dob);
 
-         dateChooser = new JDateChooser();
-         dateChooser.setBounds(100, 240, 400, 30);
-         dateChooser.setForeground(new Color(105, 105, 105));
-         add(dateChooser);
+        dateChooser = new JDateChooser();
+        dateChooser.setBounds(300, 240, 400, 30);
+        dateChooser.setForeground(new Color(105, 105, 105));
+        add(dateChooser);
 
         JLabel gender = new JLabel("Gender:");
         gender.setFont(new Font("Raleway", Font.BOLD, 20));

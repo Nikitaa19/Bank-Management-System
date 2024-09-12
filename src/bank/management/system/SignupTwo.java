@@ -1,13 +1,11 @@
-//package bank.management.system;
+package bank.management.system;
 
-//import java.awt.Color;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*;
 
 public class SignupTwo extends JFrame implements ActionListener {
 
-    long random;
     JTextField pan, aadhar;
     JButton next;
     JRadioButton syes, sno, eyes, eno;
@@ -15,10 +13,9 @@ public class SignupTwo extends JFrame implements ActionListener {
     String formno;
 
     SignupTwo(String formno) {
-        this.formno = formno;
 
         setLayout(null);
-
+        
         setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 2");
 
         JLabel additionalDetails = new JLabel("Page 2: Additional Details");
@@ -112,12 +109,12 @@ public class SignupTwo extends JFrame implements ActionListener {
         add(state);
 
         syes = new JRadioButton("Yes");
-        syes.setBounds(300, 390, 100, 30);
+        syes.setBounds(300, 540, 100, 30);
         syes.setBackground(Color.WHITE);
         add(syes);
 
         sno = new JRadioButton("No");
-        sno.setBounds(450, 390, 100, 30);
+        sno.setBounds(450, 540, 100, 30);
         sno.setBackground(Color.WHITE);
         add(sno);
 
@@ -131,12 +128,12 @@ public class SignupTwo extends JFrame implements ActionListener {
         add(pincode);
 
         eyes = new JRadioButton("Yes");
-        eyes.setBounds(300, 390, 100, 30);
+        eyes.setBounds(300, 590, 100, 30);
         eyes.setBackground(Color.WHITE);
         add(eyes);
 
         eno = new JRadioButton("No");
-        eno.setBounds(450, 390, 100, 30);
+        eno.setBounds(450, 590, 100, 30);
         eno.setBackground(Color.WHITE);
         add(eno);
 
@@ -160,7 +157,6 @@ public class SignupTwo extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-        String formno = "" + random;
         String sreligion = (String) religion.getSelectedItem();
         String scategory = (String) category.getSelectedItem();
         String sincome = (String) income.getSelectedItem();
@@ -187,7 +183,7 @@ public class SignupTwo extends JFrame implements ActionListener {
             Conn c = new Conn();
             String query = "insert into signuptwo values('"+formno+"', '"+sreligion+"', '"+scategory+"', '"+sincome+"', '"+seducation+"', '"+soccupation+"', '"+span+"', '"+saadhar+"', '"+seniorcitizen+"', '"+existingaccount+"')";
             c.s.executeUpdate(query);
-
+            
             //Signup3 Object
         } catch (Exception e) {
             System.out.println(e);
