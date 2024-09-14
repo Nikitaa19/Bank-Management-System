@@ -6,6 +6,8 @@ import java.awt.event.*;
 
 public class Transactions extends JFrame implements ActionListener {
     
+    JButton deposit, withdrawl, ministatement, pinchange, fastcash, balanceenquiry, exit;
+    
     Transactions() {
         
         setLayout(null);
@@ -23,42 +25,51 @@ public class Transactions extends JFrame implements ActionListener {
         text.setFont(new Font("System", Font.BOLD, 16));
         image.add(text);
         
-        JButton deposit = new JButton("Deposit");
+        deposit = new JButton("Deposit");
         deposit.setBounds(170, 415, 150, 30);
+        deposit.addActionListener(this);
         image.add(deposit);
         
-        JButton withdrawl = new JButton("Cash Withdrawl");
+        withdrawl = new JButton("Cash Withdrawl");
         withdrawl.setBounds(355, 415, 150, 30);
+        withdrawl.addActionListener(this);
         image.add(withdrawl);
         
-        JButton fastcash = new JButton("Fast Cash");
+        fastcash = new JButton("Fast Cash");
         fastcash.setBounds(170, 450, 150, 30);
+        fastcash.addActionListener(this);
         image.add(fastcash);
         
-        JButton ministatement = new JButton("Mini Statement");
+        ministatement = new JButton("Mini Statement");
         ministatement.setBounds(355, 450, 150, 30);
+        ministatement.addActionListener(this);
         image.add(ministatement);
         
-        JButton pinchange = new JButton("Pin Cash");
+        pinchange = new JButton("Pin Cash");
         pinchange.setBounds(170, 485, 150, 30);
+        pinchange.addActionListener(this);
         image.add(pinchange);
         
-        JButton balanceenquiry = new JButton("Balance Enquiry");
+        balanceenquiry = new JButton("Balance Enquiry");
         balanceenquiry.setBounds(355, 485, 150, 30);
+        balanceenquiry.addActionListener(this);
         image.add(balanceenquiry);
         
-        JButton exit = new JButton("Exit");
+        exit = new JButton("Exit");
         exit.setBounds(355, 520, 150, 30);
+        exit.addActionListener(this);
         image.add(exit);
         
         setSize(900, 900);
         setLocation(300, 0);
-        //setUndecorated(true);
+        setUndecorated(true);
         setVisible(true);
     }
     
     public void actionPerformed(ActionEvent ae) {
-        
+        if (ae.getSource() == exit) {
+            System.exit(0);
+        }
     }
     
     public static void main(String args[]) {
@@ -66,4 +77,3 @@ public class Transactions extends JFrame implements ActionListener {
     }
     
 }
-hi nikiya 
