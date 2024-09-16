@@ -22,6 +22,11 @@ public class Deposit extends JFrame {
         text.setBounds(170, 300, 400, 20);
         image.add(text);
         
+        JTextField amount = new JTextField();
+        amount.setFont(new Font("Raleway", Font.BOLD, 22));
+        amount.setBounds(170, 350, 320, 25);
+        image.add(amount);
+        
         setSize(900, 900);
         setLocation(300, 0);
         setVisible(true);
