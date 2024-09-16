@@ -16,6 +16,12 @@ public class Deposit extends JFrame {
         image.setBounds(0, 0, 900, 900);
         add(image);
         
+        JLabel text = new JLabel("Enter the amount you want to deposit");
+        text.setForeground(Color.WHITE);
+        text.setFont(new Font("System", Font.BOLD, 16));
+        text.setBounds(170, 300, 400, 20);
+        image.add(text);
+        
         setSize(900, 900);
         setLocation(300, 0);
         setVisible(true);
