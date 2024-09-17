@@ -55,7 +55,7 @@ public class Deposit extends JFrame implements ActionListener {
             String number = amount.getText();
             Date date = new Date();
             if (number.equals("")) {
-                JOptionPane.showMessageDialog(null, "Please enter the amount you want to deposit");
+                JOptionPane.showMessageDialog(null, "Please enter the amount you want to Deposit");
             } else {
                 try {
                     Conn conn = new Conn();
