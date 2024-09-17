@@ -2,8 +2,12 @@ package bank.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class Deposit extends JFrame {
+public class Deposit extends JFrame implements ActionListener {
+    
+    JTextField amount;
+    JButton deposit, back;
     
     Deposit() {
         
@@ -22,22 +26,30 @@ public class Deposit extends JFrame {
         text.setBounds(170, 300, 400, 20);
         image.add(text);
         
-        JTextField amount = new JTextField();
+        amount = new JTextField();
         amount.setFont(new Font("Raleway", Font.BOLD, 22));
         amount.setBounds(170, 350, 320, 25);
         image.add(amount);
         
-        JButton deposit = new JButton("Deposit");
+        deposit = new JButton("Deposit");
         deposit.setBounds(355, 485, 150, 30);
         image.add(deposit);
         
-        JButton back = new JButton("Back");
+        back = new JButton("Back");
         back.setBounds(355, 520, 150, 30);
         image.add(back);
         
         setSize(900, 900);
         setLocation(300, 0);
         setVisible(true);
+    }
+    
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == deposit) {
+            
+        } else if (ae.getSource() == back) {
+            
+        }
     }
     
     public static void main(String args[]) {
