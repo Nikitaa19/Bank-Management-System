@@ -23,10 +23,10 @@ public class SignupTwo extends JFrame implements ActionListener {
         additionalDetails.setBounds(290, 80, 400, 30);
         add(additionalDetails);
 
-        JLabel name = new JLabel("Religion:");
-        name.setFont(new Font("Raleway", Font.BOLD, 20));
-        name.setBounds(100, 140, 100, 30);
-        add(name);
+        JLabel treligion = new JLabel("Religion:");
+        treligion.setFont(new Font("Raleway", Font.BOLD, 20));
+        treligion.setBounds(100, 140, 100, 30);
+        add(treligion);
 
         String valReligion[] = {"Hindu", "Muslim", "Sikh", "Christian", "Other"};
         religion = new JComboBox(valReligion);
@@ -34,10 +34,10 @@ public class SignupTwo extends JFrame implements ActionListener {
         religion.setBackground(Color.WHITE);
         add(religion);
 
-        JLabel mname = new JLabel("Category:");
-        mname.setFont(new Font("Raleway", Font.BOLD, 20));
-        mname.setBounds(100, 190, 200, 30);
-        add(mname);
+        JLabel tcategory = new JLabel("Category:");
+        tcategory.setFont(new Font("Raleway", Font.BOLD, 20));
+        tcategory.setBounds(100, 190, 200, 30);
+        add(tcategory);
 
         String valcategory[] = {"General", "OBC", "SC", "ST", "Other"};
         category = new JComboBox(valcategory);
@@ -45,10 +45,10 @@ public class SignupTwo extends JFrame implements ActionListener {
         category.setBackground(Color.WHITE);
         add(category);
         
-        JLabel dob = new JLabel("Income:");
-        dob.setFont(new Font("Raleway", Font.BOLD, 20));
-        dob.setBounds(100, 240, 200, 30);
-        add(dob);
+        JLabel tincome = new JLabel("Income:");
+        tincome.setFont(new Font("Raleway", Font.BOLD, 20));
+        tincome.setBounds(100, 240, 200, 30);
+        add(tincome);
 
         String incomecategory[] = {"NULL", "< 1,50,000", "< 2,50,000", "< 5,00,000", "Upto 10,00,000"};
         income = new JComboBox(incomecategory);
@@ -56,15 +56,15 @@ public class SignupTwo extends JFrame implements ActionListener {
         income.setBackground(Color.WHITE);
         add(income);
 
-        JLabel gender = new JLabel("Educational");
-        gender.setFont(new Font("Raleway", Font.BOLD, 20));
-        gender.setBounds(100, 290, 200, 30);
-        add(gender);
+        JLabel teducation = new JLabel("Educational");
+        teducation.setFont(new Font("Raleway", Font.BOLD, 20));
+        teducation.setBounds(100, 290, 200, 30);
+        add(teducation);
 
-        JLabel email = new JLabel("Qualification:");
-        email.setFont(new Font("Raleway", Font.BOLD, 20));
-        email.setBounds(100, 315, 200, 30);
-        add(email);
+        JLabel tqualification = new JLabel("Qualification:");
+        tqualification.setFont(new Font("Raleway", Font.BOLD, 20));
+        tqualification.setBounds(100, 315, 200, 30);
+        add(tqualification);
 
         String educationValues[] = {"Non-Graduate", "Graduate", "Post-Graduate", "Doctorate", "Others"};
         education = new JComboBox(educationValues);
@@ -72,10 +72,10 @@ public class SignupTwo extends JFrame implements ActionListener {
         education.setBackground(Color.WHITE);
         add(education);
 
-        JLabel marital = new JLabel("Occupation:");
-        marital.setFont(new Font("Raleway", Font.BOLD, 20));
-        marital.setBounds(100, 390, 200, 30);
-        add(marital);
+        JLabel toccupation = new JLabel("Occupation:");
+        toccupation.setFont(new Font("Raleway", Font.BOLD, 20));
+        toccupation.setBounds(100, 390, 200, 30);
+        add(toccupation);
 
         String occupationValues[] = {"Salaried", "Self-Employed", "Business", "Student", "Retired", "Others"};
         occupation = new JComboBox(occupationValues);
@@ -83,30 +83,30 @@ public class SignupTwo extends JFrame implements ActionListener {
         occupation.setBackground(Color.WHITE);
         add(occupation);
 
-        JLabel address = new JLabel("PAN Number:");
-        address.setFont(new Font("Raleway", Font.BOLD, 20));
-        address.setBounds(100, 440, 200, 30);
-        add(address);
+        JLabel tpan = new JLabel("PAN Number:");
+        tpan.setFont(new Font("Raleway", Font.BOLD, 20));
+        tpan.setBounds(100, 440, 200, 30);
+        add(tpan);
 
         pan = new JTextField();
         pan.setFont(new Font("Raleway", Font.BOLD, 14));
         pan.setBounds(300, 440, 400, 30);
         add(pan);
 
-        JLabel city = new JLabel("Aadhar Number:");
-        city.setFont(new Font("Raleway", Font.BOLD, 20));
-        city.setBounds(100, 490, 200, 30);
-        add(city);
+        JLabel taadhar = new JLabel("Aadhar Number:");
+        taadhar.setFont(new Font("Raleway", Font.BOLD, 20));
+        taadhar.setBounds(100, 490, 200, 30);
+        add(taadhar);
 
         aadhar = new JTextField();
         aadhar.setFont(new Font("Raleway", Font.BOLD, 14));
         aadhar.setBounds(300, 490, 400, 30);
         add(aadhar);
 
-        JLabel state = new JLabel("Senior Citizen:");
-        state.setFont(new Font("Raleway", Font.BOLD, 20));
-        state.setBounds(100, 540, 200, 30);
-        add(state);
+        JLabel tsenior = new JLabel("Senior Citizen:");
+        tsenior.setFont(new Font("Raleway", Font.BOLD, 20));
+        tsenior.setBounds(100, 540, 200, 30);
+        add(tsenior);
 
         syes = new JRadioButton("Yes");
         syes.setBounds(300, 540, 100, 30);
