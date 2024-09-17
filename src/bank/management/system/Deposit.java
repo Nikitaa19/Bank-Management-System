@@ -36,10 +36,12 @@ public class Deposit extends JFrame implements ActionListener {
         
         deposit = new JButton("Deposit");
         deposit.setBounds(355, 485, 150, 30);
+        deposit.addActionListener(this);
         image.add(deposit);
         
         back = new JButton("Back");
         back.setBounds(355, 520, 150, 30);
+        back.addActionListener(this);
         image.add(back);
         
         setSize(900, 900);
@@ -51,7 +53,8 @@ public class Deposit extends JFrame implements ActionListener {
         if (ae.getSource() == deposit) {
             
         } else if (ae.getSource() == back) {
-            
+            setVisible(false);
+            new Transactions(pinnumber).setVisible(true);
         }
     }
     
