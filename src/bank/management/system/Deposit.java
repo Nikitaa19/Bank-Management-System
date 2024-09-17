@@ -31,6 +31,10 @@ public class Deposit extends JFrame {
         deposit.setBounds(355, 485, 150, 30);
         image.add(deposit);
         
+        JButton back = new JButton("Back");
+        back.setBounds(355, 520, 150, 30);
+        image.add(back);
+        
         setSize(900, 900);
         setLocation(300, 0);
         setVisible(true);
