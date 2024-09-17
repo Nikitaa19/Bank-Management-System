@@ -61,7 +61,7 @@ public class Withdrawl extends JFrame implements ActionListener {
                     Conn conn = new Conn();
                     String query = "insert into bank values('"+pinnumber+"', '"+date+"', 'Withdrawl', '"+number+"')";
                     conn.s.executeUpdate(query);
-                    JOptionPane.showMessageDialog(null, "Rs. "+number+" Withdrawl Successfull");
+                    JOptionPane.showMessageDialog(null, "Rs. "+number+" Withdrawl Successful");
                     setVisible(false);
                     new Transactions(pinnumber).setVisible(true);
                 } catch (Exception e) {
