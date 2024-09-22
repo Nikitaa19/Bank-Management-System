@@ -22,6 +22,12 @@ public class PinChange extends JFrame{
         text.setBounds(250, 280, 500, 35);
         image.add(text);
         
+        JLabel pintext = new JLabel("New PIN:");
+        pintext.setForeground(Color.WHITE);
+        pintext.setFont(new Font("System", Font.BOLD, 16));
+        pintext.setBounds(165, 320, 180, 25);
+        image.add(pintext);
+        
         setSize(900, 900);
         setLocation(300, 0);
         setVisible(true);
