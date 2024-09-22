@@ -28,6 +28,12 @@ public class PinChange extends JFrame{
         pintext.setBounds(165, 320, 180, 25);
         image.add(pintext);
         
+        JLabel repintext = new JLabel("Re-Enter New PIN:");
+        repintext.setForeground(Color.WHITE);
+        repintext.setFont(new Font("System", Font.BOLD, 16));
+        repintext.setBounds(165, 360, 180, 25);
+        image.add(repintext);
+        
         setSize(900, 900);
         setLocation(300, 0);
         setVisible(true);
