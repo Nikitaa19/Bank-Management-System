@@ -2,8 +2,9 @@ package bank.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class PinChange extends JFrame{
+public class PinChange extends JFrame implements ActionListener {
     
     PinChange(String pinchange) {
         
@@ -39,9 +40,26 @@ public class PinChange extends JFrame{
         repintext.setBounds(165, 360, 180, 25);
         image.add(repintext);
         
+        JTextField repin = new JTextField();
+        repin.setFont(new Font("Raleway", Font.BOLD, 25));
+        repin.setBounds(330, 360, 180, 25);
+        image.add(repin);
+        
+        JButton change = new JButton("CHANGE");
+        change.setBounds(355, 485, 150, 30);
+        image.add(change);
+        
+        JButton back = new JButton("BACK");
+        back.setBounds(355, 520, 150, 30);
+        image.add(back);
+        
         setSize(900, 900);
         setLocation(300, 0);
         setVisible(true);
+    }
+    
+    public void actionPerformed(ActionEvent ae) {
+        
     }
     
     public static void main(String args[]) {
