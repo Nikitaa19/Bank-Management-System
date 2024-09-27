@@ -3,15 +3,16 @@ package bank.management.system;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.*;
 
 public class BalanceEnquiry extends JFrame implements ActionListener {
     
     JButton back;
-    String pinchange;
+    String pinnumber;
     
-    BalanceEnquiry(String pinchange) {
+    BalanceEnquiry(String pinnumber) {
         
-        this.pinchange = pinchange;
+        this.pinnumber = pinnumber;
         
         setLayout(null);
         
@@ -27,6 +28,22 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
         back.addActionListener(this);
         image.add(back);
         
+        Conn c = new Conn();
+        int balance = 0;
+        try {
+            ResultSet rs = c.s.executeQuery("select * from bank where pin = '"+pinnumber+"'");
+            while (rs.next()) {
+                if (rs.getString("type").equals("Deposit")) {
+                    balance += Integer.parseInt(rs.getString("amount"));
+                } else {
+                    balance -= Integer.parseInt(rs.getString("amount"));
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+               
+        
         setSize(900, 900);
         setLocation(300, 0);
         setUndecorated(true);
@@ -36,7 +53,7 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
     
     public void actionPerformed(ActionEvent ae) {
         setVisible(false);
-        new Transactions(pinchange).setVisible(true);
+        new Transactions(pinnumber).setVisible(true);
     }
     
     public static void main(String args[]) {
