@@ -5,6 +5,8 @@ import java.awt.*;
 
 public class BalanceEnquiry extends JFrame {
     
+    JButton back;
+    
     BalanceEnquiry(String pinchange) {
         
         setLayout(null);
@@ -15,6 +17,10 @@ public class BalanceEnquiry extends JFrame {
         JLabel image = new JLabel(i3);
         image.setBounds(0, 0, 900, 900);
         add(image);
+        
+        back = new JButton("Back");
+        back.setBounds(355, 520, 150, 30);
+        image.add(back);
         
         setSize(900, 900);
         setLocation(300, 0);
