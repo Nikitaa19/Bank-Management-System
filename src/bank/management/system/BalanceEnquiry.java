@@ -24,10 +24,12 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
         
         back = new JButton("Back");
         back.setBounds(355, 520, 150, 30);
+        back.addActionListener(this);
         image.add(back);
         
         setSize(900, 900);
         setLocation(300, 0);
+        setUndecorated(true);
         setVisible(true);
         
     }
