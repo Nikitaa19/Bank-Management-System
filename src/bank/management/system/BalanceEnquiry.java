@@ -2,12 +2,16 @@ package bank.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class BalanceEnquiry extends JFrame {
+public class BalanceEnquiry extends JFrame implements ActionListener {
     
     JButton back;
+    String pinchange;
     
     BalanceEnquiry(String pinchange) {
+        
+        this.pinchange = pinchange;
         
         setLayout(null);
         
@@ -26,6 +30,11 @@ public class BalanceEnquiry extends JFrame {
         setLocation(300, 0);
         setVisible(true);
         
+    }
+    
+    public void actionPerformed(ActionEvent ae) {
+        setVisible(false);
+        new Transactions(pinchange).setVisible(true);
     }
     
     public static void main(String args[]) {
