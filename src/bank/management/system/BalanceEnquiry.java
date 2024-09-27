@@ -1,9 +1,15 @@
 package bank.management.system;
 
-public class BalanceEnquiry {
+import javax.swing.*;
+
+public class BalanceEnquiry extends JFrame {
+    
+    BalanceEnquiry(String pinchange) {
+        
+    }
     
     public static void main(String args[]) {
-        new BalanceEnquiry();
+        new BalanceEnquiry("");
     }
     
 }
