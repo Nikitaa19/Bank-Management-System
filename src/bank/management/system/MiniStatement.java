@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class MiniStatement extends JFrame {
     
-    MiniStatement() {
+    MiniStatement(String pinnumber) {
         setTitle("Mini Statement");
         
         setLayout(null);
@@ -20,6 +20,12 @@ public class MiniStatement extends JFrame {
         JLabel card = new JLabel();
         card.setBounds(20, 80, 300, 20);
         add(card);
+        
+        try {
+            
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         
         setSize(400, 600);
         setLocation(20, 20);
