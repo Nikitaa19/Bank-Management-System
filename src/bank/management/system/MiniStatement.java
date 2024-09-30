@@ -17,6 +17,10 @@ public class MiniStatement extends JFrame {
         bank.setBounds(150, 20, 100, 20);
         add(bank);
         
+        JLabel card = new JLabel();
+        card.setBounds(20, 80, 300, 20);
+        add(card);
+        
         setSize(400, 600);
         setLocation(20, 20);
         getContentPane().setBackground(Color.WHITE);
