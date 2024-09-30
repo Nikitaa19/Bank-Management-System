@@ -22,7 +22,7 @@ public class MiniStatement extends JFrame {
         add(card);
         
         try {
-            
+            Conn conn = new Conn();
         } catch (Exception e) {
             System.out.println(e);
         }
