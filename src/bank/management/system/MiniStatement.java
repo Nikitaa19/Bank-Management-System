@@ -1,5 +1,11 @@
 package bank.management.system;
 
-public class MiniStatement {
+import javax.swing.*;
+
+public class MiniStatement extends JFrame {
+    
+    public static void main(String args[]) {
+        new MiniStatement();
+    }
     
 }
