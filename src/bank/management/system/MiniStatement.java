@@ -25,6 +25,9 @@ public class MiniStatement extends JFrame {
         try {
             Conn conn = new Conn();
             ResultSet rs = conn.s.executeQuery("select * from login where pin = '"+pinnumber+"'");
+            while (rs.next()) {
+                card.setText("Card Number: " + rs.getString("cardnumber").substring(0, 4) + "XXXXXXXX" + rs.getString("cardnumber").substring(12));
+            }
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -36,7 +39,7 @@ public class MiniStatement extends JFrame {
     }
     
     public static void main(String args[]) {
-        new MiniStatement();
+        new MiniStatement("");
     }
     
 }
