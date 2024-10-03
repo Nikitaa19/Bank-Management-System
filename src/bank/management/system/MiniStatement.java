@@ -36,7 +36,7 @@ public class MiniStatement extends JFrame {
             Conn conn = new Conn();
             ResultSet rs = conn.s.executeQuery("select * from bank where pin = '"+pinnumber+"'");
             while (rs.next()) {
-                mini.setText(mini.getText() + "<html>" + rs.getString("date") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + rs.getString("type") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + rs.getString("amount"));
+                mini.setText(mini.getText() + "<html>" + rs.getString("date") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + rs.getString("type") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + rs.getString("amount") + "<br><br><html>");
             }
         } catch (Exception e) {
             System.out.println(e);
