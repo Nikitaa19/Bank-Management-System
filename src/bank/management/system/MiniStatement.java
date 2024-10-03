@@ -23,6 +23,7 @@ public class MiniStatement extends JFrame {
         
         try {
             Conn conn = new Conn();
+            conn.s.executeQuery("select * from login where pin = ")
         } catch (Exception e) {
             System.out.println(e);
         }
