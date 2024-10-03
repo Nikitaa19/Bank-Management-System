@@ -48,6 +48,7 @@ public class MiniStatement extends JFrame {
                     bal -= Integer.parseInt(rs.getString("amount"));
                 }
             }
+            balance.setText("Your current account balance is Rs " + bal);
         } catch (Exception e) {
             System.out.println(e);
         }
