@@ -11,8 +11,8 @@ public class MiniStatement extends JFrame {
         
         setLayout(null);
         
-        JLabel text = new JLabel();
-        add(text);
+        JLabel mini = new JLabel();
+        add(mini);
         
         JLabel bank = new JLabel("Indian Bank");
         bank.setBounds(150, 20, 100, 20);
@@ -27,6 +27,16 @@ public class MiniStatement extends JFrame {
             ResultSet rs = conn.s.executeQuery("select * from login where pin = '"+pinnumber+"'");
             while (rs.next()) {
                 card.setText("Card Number: " + rs.getString("cardnumber").substring(0, 4) + "XXXXXXXX" + rs.getString("cardnumber").substring(12));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        
+        try {
+            Conn conn = new Conn();
+            ResultSet rs = conn.s.executeQuery("select * from bank where pin = '"+pinnumber+"'");
+            while (rs.next()) {
+                mini.setText(mini.getText() + "<html>" + rs.getString("date"));
             }
         } catch (Exception e) {
             System.out.println(e);
