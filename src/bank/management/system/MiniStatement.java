@@ -2,6 +2,7 @@ package bank.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.sql.*;
 
 public class MiniStatement extends JFrame {
     
@@ -23,7 +24,7 @@ public class MiniStatement extends JFrame {
         
         try {
             Conn conn = new Conn();
-            conn.s.executeQuery("select * from login where pin = ")
+            ResultSet rs = conn.s.executeQuery("select * from login where pin = '"+pinnumber+"'");
         } catch (Exception e) {
             System.out.println(e);
         }
