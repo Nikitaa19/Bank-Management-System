@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class FastCash extends JFrame implements ActionListener {
     
-    JButton deposit, withdrawl, ministatement, pinchange, fastcash, balanceenquiry, exit;
+    JButton deposit, depositone, depositthree, depositfour, deposittwo, depositfive, exit;
     String pinnumber;
     
     FastCash(String pinnumber) {
@@ -35,30 +35,30 @@ public class FastCash extends JFrame implements ActionListener {
         deposit.addActionListener(this);
         image.add(deposit);
         
-        withdrawl = new JButton("Rs 500");
-        withdrawl.setBounds(355, 415, 150, 30);
-        withdrawl.addActionListener(this);
-        image.add(withdrawl);
+        depositone = new JButton("Rs 500");
+        depositone.setBounds(355, 415, 150, 30);
+        depositone.addActionListener(this);
+        image.add(depositone);
         
-        fastcash = new JButton("Rs 1000");
-        fastcash.setBounds(170, 450, 150, 30);
-        fastcash.addActionListener(this);
-        image.add(fastcash);
+        deposittwo = new JButton("Rs 1000");
+        deposittwo.setBounds(170, 450, 150, 30);
+        deposittwo.addActionListener(this);
+        image.add(deposittwo);
         
-        ministatement = new JButton("Rs 2000");
-        ministatement.setBounds(355, 450, 150, 30);
-        ministatement.addActionListener(this);
-        image.add(ministatement);
+        depositthree = new JButton("Rs 2000");
+        depositthree.setBounds(355, 450, 150, 30);
+        depositthree.addActionListener(this);
+        image.add(depositthree);
         
-        pinchange = new JButton("Rs 5000");
-        pinchange.setBounds(170, 485, 150, 30);
-        pinchange.addActionListener(this);
-        image.add(pinchange);
+        depositfour = new JButton("Rs 5000");
+        depositfour.setBounds(170, 485, 150, 30);
+        depositfour.addActionListener(this);
+        image.add(depositfour);
         
-        balanceenquiry = new JButton("Rs 10000");
-        balanceenquiry.setBounds(355, 485, 150, 30);
-        balanceenquiry.addActionListener(this);
-        image.add(balanceenquiry);
+        depositfive = new JButton("Rs 10000");
+        depositfive.setBounds(355, 485, 150, 30);
+        depositfive.addActionListener(this);
+        image.add(depositfive);
         
         exit = new JButton("BACK");
         exit.setBounds(355, 520, 150, 30);
